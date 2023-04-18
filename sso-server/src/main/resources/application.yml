@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+#    推荐不为空，否则可能出现认证失败问题
+    context-path: /server
+
+# 数据库配置信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/database?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+
+# mybatis配置信息
+mybatis:
+  type-aliases-package: com.xy.ssoserver.entity
+  mapper-locations: classpath:com.xy.ssoserver.mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+

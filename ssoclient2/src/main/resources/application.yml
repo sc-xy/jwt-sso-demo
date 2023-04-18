@@ -1,0 +1,14 @@
+security:
+  oauth2:
+    client:
+      client-id: client2
+      client-secret: client2secret
+      user-authorization-uri: http://localhost:8080/server/oauth/authorize
+      access-token-uri: http://localhost:8080/server/oauth/token
+    resource:
+      jwt:
+        key-uri: http://localhost:8080/server/oauth/token_key
+server:
+  port: 8082
+  servlet:
+    context-path: /client2
