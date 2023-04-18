@@ -6,3 +6,7 @@
 > 访问`http://localhost:8081/client1/index`即可跳转到登陆界面，在`http://localhost:8080/server/login`登陆后授权即可访问`sso-client1`和`sso-client2`
 
 具体实现思路欢迎到我的博客上查看[某洋の博客 (sc-xy.top)](http://springblog.sc-xy.top/) [XY Blog - 某洋的博客 (sc-xy.top)](https://sc-xy.top/)
+
+# TODO
+
+基于`jwt`的签名是一次下发永久有效，暂时还未在项目中实现`sso-client1`注销账户后`sso-client2`一同注销（即token同步失效）
